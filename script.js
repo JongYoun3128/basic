@@ -64,35 +64,53 @@ window.onclick = function (event) {
 
 // 카카오톡 공유
 function shareKakao() {
-    const url = window.location.href;
-    const text =
-        "도룡미소부동산 양희수 대표의 명함입니다.\n전화: 010-2270-3008\n이메일: bizup@bizup.com";
+    const shareUrl = "https://jongyoun3128.github.io/basic/";
+    const text = "양희수 디지털 명함";
+    const message = `${text}\n${shareUrl}`;
 
-    // 모바일에서 카카오톡 앱으로 공유
-    const kakaoUrl = `https://sharer.kakao.com/talk/friends/picker/link?app_key=YOUR_APP_KEY&validation_action=default&validation_params={"link_url":"${encodeURIComponent(
-        url
-    )}"}`;
+    // 모바일에서 Web Share API 사용 (카카오톡 포함)
+    if (navigator.share) {
+        navigator
+            .share({
+                title: text,
+                text: text,
+                url: shareUrl,
+            })
+            .then(() => {
+                console.log("공유 성공");
+                closeShareModal();
+            })
+            .catch((error) => {
+                console.log("공유 취소 또는 실패:", error);
+                // Web Share 실패시 카카오톡 URL 스킴 사용
+                fallbackKakaoShare(message);
+            });
+    } else {
+        // Web Share API 미지원시 카카오톡 URL 스킴 직접 사용
+        fallbackKakaoShare(message);
+    }
+}
 
-    // 간단한 카카오톡 공유 (URL 스키마)
-    const message = `${text}\n\n${url}`;
-    const shareUrl = `kakaotalk://send?text=${encodeURIComponent(message)}`;
+// 카카오톡 URL 스킴을 사용한 공유 (폴백)
+function fallbackKakaoShare(message) {
+    const kakaoUrl = `kakaotalk://send?text=${encodeURIComponent(message)}`;
 
-    window.location.href = shareUrl;
+    // 카카오톡 앱 열기 시도
+    const openKakao = window.open(kakaoUrl, "_self");
 
-    // 카카오톡이 설치되어 있지 않으면 웹 공유로 폴백
+    // 1초 후 카카오톡이 열리지 않으면 링크 복사 제안
     setTimeout(() => {
         if (
             confirm(
-                "카카오톡이 설치되어 있지 않습니다.\n링크를 복사하시겠습니까?"
+                "카카오톡이 설치되어 있지 않거나 열 수 없습니다.\n링크를 복사하시겠습니까?"
             )
         ) {
-            copyToClipboard();
+            copyToClipboard("https://jongyoun3128.github.io/basic/");
         }
     }, 1000);
 
     closeShareModal();
 }
-
 // 라인 공유
 function shareLine() {
     const url = window.location.href;
