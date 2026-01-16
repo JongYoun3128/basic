@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="BizUP" />
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:image"
+            content="https://jongyoun3128.github.io/bizup-gangjuhyun-/images/url2.png"
+        />
+        <meta property="og:description" content="BizUp 전자명함입니다." />
+        <title>전자명함</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="card-container">
+            <!-- 앞면 -->
+            <div class="card card-front"></div>
+
+            <!-- 뒷면 -->
+            <div class="card card-back">
+                <div class="card-back-left">
+                    <div class="name-section">
+                        <div class="position">대표</div>
+                        <div class="name-ko">양 희 수</div>
+                    </div>
+                    <div class="info-section">
+                        <div class="info-item">
+                            <svg
+                                class="info-icon"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M20 10.999h2C22 5.869 18.127 2 12.99 2v2C17.052 4 20 6.943 20 10.999z"
+                                    fill="white"
+                                />
+                                <path
+                                    d="M13 8c2.103 0 3 .897 3 3h2c0-3.225-1.775-5-5-5v2zm3.422 5.443a1.001 1.001 0 00-1.391.043l-2.393 2.461c-.576-.11-1.734-.471-2.926-1.66-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394a1 1 0 00.043-1.391L6.859 3.513a1 1 0 00-1.391-.087l-2.17 1.861a1 1 0 00-.29.649c-.015.25-.301 6.172 4.291 10.766C11.305 20.707 16.323 21 17.705 21c.202 0 .326-.006.359-.008a.992.992 0 00.648-.291l1.86-2.171a1 1 0 00-.086-1.391l-4.064-3.696z"
+                                    fill="white"
+                                />
+                            </svg>
+                            <span class="info-text">010-2270-3008</span>
+                        </div>
+                        <div class="info-item">
+                            <svg
+                                class="info-icon"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 6.223-8-6.222V6h16zM4 18V9.044l7.386 5.745a.994.994 0 001.228 0L20 9.044 20.002 18H4z"
+                                    fill="white"
+                                />
+                            </svg>
+                            <span class="info-text">bizup@bizup.com</span>
+                        </div>
+                        <div class="info-item">
+                            <svg
+                                class="info-icon"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M12 2C7.589 2 4 5.589 4 9.995c0 6.167 7.084 11.259 7.387 11.479a1 1 0 001.226 0C12.916 21.254 20 16.162 20 9.995 20 5.589 16.411 2 12 2zm0 14a4 4 0 110-8 4 4 0 010 8z"
+                                    fill="white"
+                                />
+                                <circle cx="12" cy="12" r="2" fill="white" />
+                            </svg>
+                            <span class="info-text"
+                                >대전광역시 유성구 도룡동 4-8 102동126호</span
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="card-back-right">
+                    <div class="tagline">BUSINESS & CONSULTING</div>
+                </div>
+            </div>
+            <!-- 액션 버튼 -->
+            <div class="action-buttons">
+                <button onclick="saveContact()" class="btn btn-save">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path
+                            d="M19 21H5a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v11a2 2 0 01-2 2z"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+                        <path
+                            d="M17 21v-8H7v8M7 3v5h8"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        />
+                    </svg>
+                    연락처 저장
+                </button>
+            </div>
+            <div id="shareModal" class="share-modal">
+                <div class="share-modal-content">
+                    <div class="share-options">
+                        <button onclick="shareKakao()" class="share-option">
+                            <div class="share-icon kakao-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 3C6.48 3 2 6.58 2 11c0 2.89 1.93 5.44 4.84 6.94-.2.73-.76 2.77-.87 3.21-.13.52.19.51.4.37.16-.11 2.42-1.63 3.53-2.39.69.09 1.41.14 2.14.14 5.52 0 10-3.58 10-8S17.52 3 12 3z"
+                                    />
+                                </svg>
+                            </div>
+                            <span data-translate="kakao">카카오톡</span>
+                        </button>
+                        <button onclick="shareInstagram()" class="share-option">
+                            <div class="share-icon instagram-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                                    />
+                                </svg>
+                            </div>
+                            <span data-translate="insta">인스타그램</span>
+                        </button>
+                        <button onclick="shareLine()" class="share-option">
+                            <div class="share-icon line-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"
+                                    />
+                                </svg>
+                            </div>
+                            <span data-translate="line">라인</span>
+                        </button>
+                        <button onclick="shareEmail()" class="share-option">
+                            <div class="share-icon email-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                                    />
+                                </svg>
+                            </div>
+                            <span data-translate="email">이메일</span>
+                        </button>
+                        <button onclick="shareSMS()" class="share-option">
+                            <div class="share-icon sms-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"
+                                    />
+                                </svg>
+                            </div>
+                            <span data-translate="sms">메시지</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- 탭 프로필 섹션 -->
+            <div class="tabs-container">
+                <!-- 탭 버튼 -->
+                <div class="tabs">
+                    <button
+                        class="tab-button active"
+                        onclick="switchTab('contact')"
+                    >
+                        연락처
+                    </button>
+                    <button class="tab-button" onclick="switchTab('profile')">
+                        프로필
+                    </button>
+                    <button class="tab-button" onclick="switchTab('blog')">
+                        블로그
+                    </button>
+                </div>
+
+                <!-- 탭 컨텐츠 -->
+                <div class="tab-content">
+                    <!-- 연락처 탭 -->
+                    <div id="contact-tab" class="tab-panel active">
+                        <a href="tel:1811-8428" class="profile-link">
+                            <div class="profile-link-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M20 10.999h2C22 5.869 18.127 2 12.99 2v2C17.052 4 20 6.943 20 10.999z"
+                                    />
+                                    <path
+                                        d="M13 8c2.103 0 3 .897 3 3h2c0-3.225-1.775-5-5-5v2zm3.422 5.443a1.001 1.001 0 00-1.391.043l-2.393 2.461c-.576-.11-1.734-.471-2.926-1.66-1.192-1.193-1.553-2.354-1.66-2.926l2.459-2.394a1 1 0 00.043-1.391L6.859 3.513a1 1 0 00-1.391-.087l-2.17 1.861a1 1 0 00-.29.649c-.015.25-.301 6.172 4.291 10.766C11.305 20.707 16.323 21 17.705 21c.202 0 .326-.006.359-.008a.992.992 0 00.648-.291l1.86-2.171a1 1 0 00-.086-1.391l-4.064-3.696z"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="profile-link-content">
+                                <div class="profile-link-title">전화번호</div>
+                                <div class="profile-link-subtitle">
+                                    010-2270-3008 <br />010-5561-7919
+                                </div>
+                            </div>
+                        </a>
+
+                        <a
+                            href="mailto:officecine01@gmail.com"
+                            class="profile-link"
+                        >
+                            <div class="profile-link-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 6.223-8-6.222V6h16zM4 18V9.044l7.386 5.745a.994.994 0 001.228 0L20 9.044 20.002 18H4z"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="profile-link-content">
+                                <div class="profile-link-title">이메일</div>
+                                <div class="profile-link-subtitle">
+                                    bizup@bizup.com
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="profile-link">
+                            <div class="profile-link-content">
+                                <div class="profile-link-title">지도</div>
+                                <div class="profile-link-map">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1606.184929905643!2d127.39276509758588!3d36.37603944517375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x35654990231fbd8b%3A0x11f2b5169353ddc3!2z64yA7KCE6rSR7Jet7IucIOycoOyEseq1rCDrj4Tro6Hrj5kgNC04!5e0!3m2!1sko!2skr!4v1768551539593!5m2!1sko!2skr"
+                                        style="border: 0"
+                                        allowfullscreen=""
+                                        loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade"
+                                    ></iframe>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="profile-link">
+                            <div class="profile-link-content">
+                                <div class="profile-link-title">QR</div>
+                                <div class="profile-link-qr">
+                                    <img src="images/qr.png" alt="" />
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- 프로필 탭 -->
+                    <div id="profile-tab" class="tab-panel">
+                        <a href="#" class="profile-link">
+                            <div class="profile-link-content">
+                                <div class="profile-link-title">학력</div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="profile-link">
+                            <div class="profile-link-content">
+                                <div class="profile-link-title">경력</div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- 블로그 탭 -->
+                    <div id="blog-tab" class="tab-panel">
+                        <a
+                            href="https://blog.naver.com/izoa427"
+                            target="_blank"
+                            class="profile-link"
+                        >
+                            <div class="profile-link-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M13.3 2.1L2 8.5v7.4l5.7 3.3v-6.9l4.6-2.5v9.1l9.1 5.2V9.6l-5.8-3.3v7.1l-2.3 1.2z"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="profile-link-content">
+                                <div class="profile-link-title">
+                                    네이버 블로그
+                                </div>
+                                <div class="profile-link-subtitle">
+                                    https://blog.naver.com/izoa427
+                                </div>
+                            </div>
+                        </a>
+
+                        <a
+                            href="https://www.zeroking.co.kr"
+                            target="_blank"
+                            class="profile-link"
+                        >
+                            <div class="profile-link-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"
+                                    />
+                                </svg>
+                            </div>
+                            <div class="profile-link-content">
+                                <div class="profile-link-title">홈페이지</div>
+                                <div class="profile-link-subtitle">
+                                    https://blog.naver.com/izoa427
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
