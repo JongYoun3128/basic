@@ -364,21 +364,29 @@ body {
     width: 80%;
 }
 .tab-button {
+    width: 100%;
     flex: 1;
     padding: 15px 20px;
     border: none;
     background: transparent;
     font-size: 15px;
     font-weight: 600;
-    background: #2d4836;
+    background: #7a6200;
+    border-radius: 5px;
     color: #ffffff;
     cursor: pointer;
     transition: all 0.3s ease;
     font-family: "Segoe UI", "Noto Sans KR", sans-serif;
     position: relative;
 }
+.button2 {
+    background-color: #2d4836;
+}
+.profile-link-qr {
+    text-align: center;
+}
 .profile-link-qr img {
-    width: 100%;
+    width: 60%;
 }
 
 .tab-button.active::after {
@@ -392,9 +400,6 @@ body {
 }
 
 /* 탭 컨텐츠 */
-.tab-content {
-    padding: 15px;
-}
 
 .tab-panel {
     display: none;
