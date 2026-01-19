@@ -361,7 +361,7 @@ body {
     border-bottom: 2px solid #e0e0e0;
 }
 .card-back-right img {
-    width: 100%;
+    width: 80%;
 }
 .tab-button {
     flex: 1;
@@ -370,7 +370,8 @@ body {
     background: transparent;
     font-size: 15px;
     font-weight: 600;
-    color: #666;
+    background: #2d4836;
+    color: #ffffff;
     cursor: pointer;
     transition: all 0.3s ease;
     font-family: "Segoe UI", "Noto Sans KR", sans-serif;
@@ -378,15 +379,6 @@ body {
 }
 .profile-link-qr img {
     width: 100%;
-}
-.tab-button:hover {
-    background: rgba(44, 62, 80, 0.05);
-    color: #2c3e50;
-}
-
-.tab-button.active {
-    color: #2c3e50;
-    background: white;
 }
 
 .tab-button.active::after {

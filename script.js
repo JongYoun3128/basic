@@ -1,20 +1,3 @@
-// 탭 전환 기능
-function switchTab(tabName) {
-    // 모든 탭 버튼과 패널에서 active 클래스 제거
-    const tabButtons = document.querySelectorAll(".tab-button");
-    const tabPanels = document.querySelectorAll(".tab-panel");
-
-    tabButtons.forEach((button) => button.classList.remove("active"));
-    tabPanels.forEach((panel) => panel.classList.remove("active"));
-
-    // 선택된 탭 활성화
-    const selectedButton = event.target;
-    const selectedPanel = document.getElementById(tabName + "-tab");
-
-    selectedButton.classList.add("active");
-    selectedPanel.classList.add("active");
-}
-
 // 연락처 저장 기능 (vCard 형식)
 function saveContact() {
     const vCard = `BEGIN:VCARD
