@@ -22,9 +22,9 @@ VERSION:3.0
 FN:양희수
 N:양;희수;;;
 ORG:도룡미소부동산
-TITLE:대표
-TEL;TYPE=CELL:010-2270-3008
-EMAIL:bizup@bizup.com
+TITLE:대표/공인중개사
+TEL;TYPE=CELL:010-5561-7919
+EMAIL:izoa427@naver.com
 ADR;TYPE=WORK:;;대한민국;도룡동;유성구;;대전
 URL:${window.location.href}
 END:VCARD`;
@@ -35,7 +35,7 @@ END:VCARD`;
     const url = window.URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
-    link.download = "도룡미소부동산_양희수_대표.vcf";
+    link.download = "도룡미소부동산_양희수_대표/공인중개사.vcf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -114,7 +114,7 @@ function fallbackKakaoShare(message) {
 // 라인 공유
 function shareLine() {
     const url = window.location.href;
-    const text = "도룡미소부동산 양희수 대표의 명함입니다";
+    const text = "도룡미소부동산 양희수 대표/공인중개사의 명함입니다";
 
     const lineUrl = `https://line.me/R/share?text=${encodeURIComponent(
         text + "\n" + url,
@@ -126,13 +126,13 @@ function shareLine() {
 
 // 이메일 공유
 function shareEmail() {
-    const subject = "도룡미소부동산 - 양희수 대표 명함";
-    const body = `도룡미소부동산 양희수 대표의 명함입니다.
+    const subject = "도룡미소부동산 - 양희수 대표/공인중개사 명함";
+    const body = `도룡미소부동산 양희수 대표/공인중개사의 명함입니다.
 
 회사: 도룡미소부동산
-대표: 양희수
-전화: 010-2270-3008
-이메일: bizup@bizup.com
+대표/공인중개사: 양희수
+전화: 010-5561-7919
+이메일: izoa427@naver.com
 주소:대한민국
 
 명함 보기: ${window.location.href}`;
@@ -147,7 +147,7 @@ function shareEmail() {
 
 // 문자 메시지 공유
 function shareSMS() {
-    const text = `도룡미소부동산 양희수 대표의 명함입니다.\n\n전화: 010-2270-3008\n이메일: bizup@bizup.com\n\n명함 보기: ${window.location.href}`;
+    const text = `도룡미소부동산 양희수 대표/공인중개사의 명함입니다.\n\n전화: 010-5561-7919\n이메일: izoa427@naver.com\n\n명함 보기: ${window.location.href}`;
 
     // iOS와 Android 모두 지원
     const smsUrl = `sms:?body=${encodeURIComponent(text)}`;
@@ -194,10 +194,9 @@ function fallbackCopyToClipboard(text) {
     document.body.removeChild(textArea);
 }
 // 다국어 번역 데이터
-// 다국어 번역 데이터
 const translations = {
     ko: {
-        position: "CEO",
+        position: "대표/공인중개사",
         name: "양 희 수",
         address: "대전광역시 유성구 도룡동 4-8<br />102동 126호",
         tagline: "Business & Consulting",
