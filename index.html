@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
     <head>
         <meta charset="UTF-8" />
@@ -16,6 +16,10 @@
         <meta property="og:description" content="BizUp 전자명함입니다." />
         <title>전자명함</title>
         <link rel="stylesheet" href="style.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css"
+        />
     </head>
     <body>
         <div class="card-container">
@@ -26,8 +30,12 @@
             <div class="card card-back">
                 <div class="card-back-left">
                     <div class="name-section">
-                        <div class="position">대표</div>
-                        <div class="name-ko">양 희 수</div>
+                        <div class="position" data-translate="position">
+                            대표
+                        </div>
+                        <div class="name-ko" data-translate="name">
+                            양 희 수
+                        </div>
                     </div>
                     <div class="info-section">
                         <div class="info-item">
@@ -75,15 +83,17 @@
                                 />
                                 <circle cx="12" cy="12" r="2" fill="white" />
                             </svg>
-                            <span class="info-text"
+                            <span class="info-text" data-translate="address"
                                 >대전광역시 유성구 도룡동 4-8 102동126호</span
                             >
                         </div>
                     </div>
                 </div>
                 <div class="card-back-right">
-                    <img src="images/logo3.png" alt="" /><br />
-                    <div class="tagline">Business & Consulting</div>
+                    <img src="images/logo3.png" alt="" />
+                    <div class="tagline" data-translate="tagline">
+                        Business & Consulting
+                    </div>
                 </div>
             </div>
             <!-- 액션 버튼 -->
@@ -159,6 +169,39 @@
                         </button>
                     </div>
                 </div>
+            </div>
+            <!-- 언어 선택 영역 -->
+            <div class="language-selector">
+                <button class="lang-btn" data-lang="ko" title="한국어">
+                    <span class="fi fi-kr"></span>
+                </button>
+                <button class="lang-btn" data-lang="en" title="English">
+                    <span class="fi fi-us"></span>
+                </button>
+                <button class="lang-btn" data-lang="ja" title="日本語">
+                    <span class="fi fi-jp"></span>
+                </button>
+                <button class="lang-btn" data-lang="zh" title="中文">
+                    <span class="fi fi-cn"></span>
+                </button>
+                <button class="lang-btn" data-lang="fr" title="Français">
+                    <span class="fi fi-fr"></span>
+                </button>
+                <button class="lang-btn" data-lang="de" title="Deutsch">
+                    <span class="fi fi-de"></span>
+                </button>
+                <button class="lang-btn" data-lang="es" title="Español">
+                    <span class="fi fi-es"></span>
+                </button>
+                <button class="lang-btn" data-lang="it" title="Italiano">
+                    <span class="fi fi-it"></span>
+                </button>
+                <button class="lang-btn" data-lang="pt" title="Português">
+                    <span class="fi fi-pt"></span>
+                </button>
+                <button class="lang-btn" data-lang="ru" title="Русский">
+                    <span class="fi fi-ru"></span>
+                </button>
             </div>
             <!-- 탭 프로필 섹션 -->
             <div class="tabs-container">
