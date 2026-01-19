@@ -424,7 +424,8 @@ body {
     border: 1px solid #e9ecef;
     transition: all 0.3s ease;
 }
-
+.profile-link {
+}
 .profile-link:hover {
     background: white;
     border-color: #2c3e50;
@@ -455,7 +456,17 @@ body {
     flex-direction: column;
     gap: 4px;
 }
-
+.profile-link-content-qr {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px 20px;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+}
 .profile-link-title {
     font-size: 16px;
     font-weight: 600;
