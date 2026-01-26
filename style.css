@@ -425,8 +425,7 @@ body {
     border: 1px solid #e9ecef;
     transition: all 0.3s ease;
 }
-.profile-link {
-}
+
 .profile-link:hover {
     background: white;
     border-color: #2c3e50;
