@@ -61,7 +61,6 @@ function shareKakao() {
             })
             .then(() => {
                 console.log("공유 성공");
-                closeShareModal();
             })
             .catch((error) => {
                 console.log("공유 취소 또는 실패:", error);
@@ -91,8 +90,6 @@ function fallbackKakaoShare(message) {
             copyToClipboard("https://jongyoun3128.github.io/basic/");
         }
     }, 1000);
-
-    closeShareModal();
 }
 // 라인 공유
 function shareLine() {
@@ -103,8 +100,6 @@ function shareLine() {
         text + "\n" + url,
     )}`;
     window.open(lineUrl, "_blank");
-
-    closeShareModal();
 }
 
 // 이메일 공유
@@ -124,8 +119,6 @@ function shareEmail() {
         subject,
     )}&body=${encodeURIComponent(body)}`;
     window.location.href = mailtoUrl;
-
-    closeShareModal();
 }
 
 // 문자 메시지 공유
@@ -135,8 +128,6 @@ function shareSMS() {
     // iOS와 Android 모두 지원
     const smsUrl = `sms:?body=${encodeURIComponent(text)}`;
     window.location.href = smsUrl;
-
-    closeShareModal();
 }
 
 // URL 클립보드 복사
