@@ -34,7 +34,7 @@ body {
 
 /* 앞면 */
 .card-front {
-    background: url(./images/1.png);
+    background: url(./images/6.jpg);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -58,7 +58,7 @@ body {
 .card-back-left {
     width: 65%;
 
-    color: #2d4836;
+    color: black;
     padding: 30px 25px;
     display: flex;
     flex-direction: column;
@@ -79,7 +79,7 @@ body {
 
 .position {
     font-size: 14px;
-    color: #2d4836;
+    color: black;
     margin-top: 5px;
 }
 
@@ -101,7 +101,7 @@ body {
     margin-right: 12px;
     flex-shrink: 0;
     opacity: 0.9;
-    background-color: #2d4836;
+    background-color: black;
     border-radius: 10px;
 }
 
@@ -144,7 +144,7 @@ body {
 
 .tagline {
     font-size: 10px;
-    color: #2d4836;
+    color: black;
     letter-spacing: 2px;
     text-align: center;
 }
@@ -176,7 +176,7 @@ body {
 }
 
 .btn-save {
-    background: #2d4836;
+    background: #e15dbc;
     color: white;
 }
 
@@ -372,7 +372,7 @@ body {
     background: transparent;
     font-size: 15px;
     font-weight: 600;
-    background: #2d4836;
+    background: black;
     border-radius: 5px;
     color: #ffffff;
     cursor: pointer;
@@ -381,7 +381,7 @@ body {
     position: relative;
 }
 .button2 {
-    background-color: #2d4836;
+    background-color: black;
 }
 .profile-link-qr {
     text-align: center;
