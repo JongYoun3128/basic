@@ -111,7 +111,7 @@ body {
 
 .card-back-right {
     width: 35%;
-
+    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
